@@ -3,7 +3,9 @@ C:\CursoLet\gestao-vendas\src\main\java\com\gvendas\gestaovendas\GestaoVendasApp
 C:\CursoLet\gestao-vendas\src\main\java\com\gvendas\gestaovendas\excecao\GestaoVendasTratamentoExcecao.java
 C:\CursoLet\gestao-vendas\src\main\java\com\gvendas\gestaovendas\excecao\Erro.java
 C:\CursoLet\gestao-vendas\src\main\java\com\gvendas\gestaovendas\repositorio\CategoriaRepositorio.java
+C:\CursoLet\gestao-vendas\src\main\java\com\gvendas\gestaovendas\controlador\util\SwaggerConfigi.java
 C:\CursoLet\gestao-vendas\src\main\java\com\gvendas\gestaovendas\entidades\Produto.java
 C:\CursoLet\gestao-vendas\src\main\java\com\gvendas\gestaovendas\entidades\Categoria.java
+C:\CursoLet\gestao-vendas\src\main\java\com\gvendas\gestaovendas\excecao\RegraNegocioException.java
 C:\CursoLet\gestao-vendas\src\main\java\com\gvendas\gestaovendas\controlador\CategoriaControlador.java
 C:\CursoLet\gestao-vendas\src\main\java\com\gvendas\gestaovendas\servico\CategoriaServico.java
