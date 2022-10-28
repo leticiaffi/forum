@@ -20,7 +20,8 @@ public class ProdutoServico {
 	
 	@Autowired
 	private CategoriaServico categoriaServico;
-		
+	private Long codigoCategoria;
+
 	public List<Produto> listarTodos(Long codigoCategoria) {
 		return produtoRepositorio.findByCategoriaCodigo(codigoCategoria);
 	}
