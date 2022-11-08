@@ -15,9 +15,23 @@ public class Categoria{
     @Column(name = "codigo")
     private Long codigo;
     @Column(name = "nome")
-    @NotBlank(message = "Nome")
-    @Length(min = 3, max = 50,message = "Nome")
     private String nome;
+
+    public Categoria() {
+    }
+
+    public Categoria(Long codigo) {
+        this.codigo = codigo;
+    }
+
+    public Categoria(String nome) {
+        this.nome = nome;
+    }
+
+    public Categoria(Long codigo, String nome) {
+        this.codigo = codigo;
+        this.nome = nome;
+    }
 
     public Long getCodigo() {
         return codigo;
@@ -36,16 +50,19 @@ public class Categoria{
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Categoria)) return false;
-        Categoria categoria = (Categoria) o;
-        return Objects.equals(getCodigo(), categoria.getCodigo()) && Objects.equals(getNome(), categoria.getNome());
+    public int hashCode() {
+        return Objects.hash(codigo, nome);
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(getCodigo(), getNome());
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Categoria)) {
+            return false;
+        }
+        Categoria other = (Categoria) obj;
+        return Objects.equals(codigo, other.codigo) && Objects.equals(nome, other.nome);
     }
-
 }

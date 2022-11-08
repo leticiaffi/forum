@@ -30,8 +30,8 @@ public class ProdutoServico {
 		return produtoRepositorio.buscarPorCodigo(codigo, codigoCategoria);
 	}
 	
-	public Produto salvar(Produto produto) {
-		validarCategoriaDoProdutoExiste(codigoCategoria);
+	public Produto salvar(Long codigoCategoria, Produto produto) {
+		validarCategoriaDoProdutoExiste(this.codigoCategoria);
 		validarProdutoDuplicado(produto);
 		return produtoRepositorio.save(produto);
 	}

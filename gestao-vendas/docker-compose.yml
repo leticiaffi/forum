@@ -14,7 +14,7 @@ services:
      MYSQL_DATABASE: gvendas_db
 
   jaeger:
-    image: jaegertracing/all-in-one:1.38
+    image: jaegertracing/all-in-one:latest
     container_name: jaeger
     ports:
       - 6831:6831/udp 
