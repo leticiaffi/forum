@@ -1,12 +1,16 @@
 com\gvendas\gestaovendas\controlador\ProdutoControlador.class
 com\gvendas\gestaovendas\entidades\Categoria.class
+com\gvendas\gestaovendas\dto\categoria\CategoriaRequestDTO.class
 com\gvendas\gestaovendas\controlador\util\SwaggerConfig.class
 com\gvendas\gestaovendas\excecao\GestaoVendasTratamentoExcecao.class
 com\gvendas\gestaovendas\GestaoVendasApplication.class
 com\gvendas\gestaovendas\controlador\CategoriaControlador.class
+com\gvendas\gestaovendas\dto\produto\ProdutoRequestDTO.class
 com\gvendas\gestaovendas\repositorio\CategoriaRepositorio.class
+com\gvendas\gestaovendas\dto\categoria\CategoriaResponseDTO.class
 com\gvendas\gestaovendas\servico\ProdutoServico.class
 com\gvendas\gestaovendas\entidades\Produto.class
+com\gvendas\gestaovendas\dto\produto\ProdutoResponseDTO.class
 com\gvendas\gestaovendas\excecao\RegraNegocioException.class
 com\gvendas\gestaovendas\excecao\Erro.class
 com\gvendas\gestaovendas\controlador\util\SwaggerConfigi.class

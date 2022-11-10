@@ -15,6 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<springfox-swagger.version>3.0.0</springfox-swagger.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -83,7 +84,6 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>6.1.4.Final</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
 		<dependency>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
@@ -93,6 +93,10 @@
 			<artifactId>opentracing-jdbc</artifactId>
 			<version>0.2.15</version>
 		</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-actuator</artifactId>
+			</dependency>
 	</dependencies>
 
 	<build>

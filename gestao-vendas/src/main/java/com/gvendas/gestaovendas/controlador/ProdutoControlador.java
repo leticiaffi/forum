@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import com.gvendas.gestaovendas.dto.produto.ProdutoRequestDTO;
 import com.gvendas.gestaovendas.dto.produto.ProdutoResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -41,16 +42,17 @@ public class ProdutoControlador {
 
 	@ApiOperation(value = "Salvar", nickname = "salvarProduto")
 	@PostMapping
-	public ResponseEntity<Produto> salvar(@PathVariable Long codigoCategoria, @Valid @RequestBody ProdutoResponseDTO produto) {
+	public ResponseEntity<ProdutoResponseDTO> salvar(@PathVariable Long codigoCategoria, @Valid @RequestBody ProdutoRequestDTO produto) {
 		Produto produtoSalvo = produtoServico.salvar(codigoCategoria, produto.converterParaEntidade(codigoCategoria));
-		return ResponseEntity.status(HttpStatus.CREATED).(ProdutoResponseDTO.converterParaProdutoDTO(produtoSalvo));
+		return ResponseEntity.status(HttpStatus.CREATED).body(ProdutoResponseDTO.converterParaProdutoDTO(produtoSalvo));
 	}
 
 	@ApiOperation(value = "Atualizar", nickname = "atualizarProduto")
 	@PutMapping("/{codigoProduto}")
-	public ResponseEntity<Produto> atualizar(@PathVariable Long codigoCategoria, @PathVariable Long codigoProduto,
-											 @Valid @RequestBody Produto produto) {
-		return ResponseEntity.ok(produtoServico.atualizar(codigoCategoria, codigoProduto, produto));
+	public ResponseEntity<ProdutoResponseDTO> atualizar(@PathVariable Long codigoCategoria, @PathVariable Long codigoProduto,
+														@Valid @RequestBody ProdutoRequestDTO produto) {
+		Produto produtoAtualizado = produtoServico.atualizar(codigoCategoria, codigoProduto, produto.converterParaEntidade(codigoCategoria, codigoProduto));
+		return ResponseEntity.ok(ProdutoResponseDTO.converterParaProdutoDTO(produtoAtualizado));
 	}
 		@ApiOperation(value = "Deletar", nickname = "deletarProduto")
 		@DeleteMapping("/{codigoProduto}")
